@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.pri-main-cont {
+    margin-top: 70px;
+    max-width: 1920px;
+    width: 100%;
+    height: auto;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.pri-main-cont > span {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    color: #AA0000;
+    cursor: pointer;
+}
+
+.pri-main-cont > h1 {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    color: #0d3b66;
+    text-align: center;
+}
+
+.pri-sec {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Effective date */
+.pri-effective {
+    font-size: 14px;
+    color: #777;
+    font-weight: 400;
+}
+
+/* Intro paragraph */
+.pri-intro {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.pri-intro strong {
+    color: #0d3b66;
+    font-weight: 600;
+}
+
+/* Divider */
+.pri-divider {
+    border: none;
+    border-top: 1px solid #dce3ec;
+    margin: 4px 0;
+}
+
+/* Each section block */
+.pri-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Section heading (h2) */
+.pri-section h2 {
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    color: #0d3b66;
+    border-left: 4px solid #EAD292;
+    padding-left: 10px;
+}
+
+/* Sub-heading (h3) */
+.pri-section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 4px;
+}
+
+/* Paragraphs */
+.pri-section p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #444;
+}
+
+/* Lists */
+.pri-section ul {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.pri-section ul li {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444;
+    list-style: disc;
+}
+
+/* Contact section */
+.pri-contact p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.9;
+}
+
+.pri-contact strong {
+    color: #0d3b66;
+    font-weight: 600;
+}
+@media (max-width: 480px) {
+    .pri-main-cont {
+        padding: 30px 20px;
+    }
+
+    .pri-main-cont > h1 {
+        font-size: 22px;
+    }
+
+    .pri-section h2 {
+        font-size: 15px;
+    }
+
+    .pri-intro,
+    .pri-section p,
+    .pri-section ul li,
+    .pri-contact p,
+    .pri-effective {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .pri-main-cont {
+        padding: 20px 16px;
+    }
+
+    .pri-main-cont > h1 {
+        font-size: 20px;
+    }
+
+    .pri-section h2 {
+        font-size: 14px;
+    }
+
+    .pri-intro,
+    .pri-section p,
+    .pri-section ul li,
+    .pri-contact p,
+    .pri-effective {
+        font-size: 12px;
+    }
+}

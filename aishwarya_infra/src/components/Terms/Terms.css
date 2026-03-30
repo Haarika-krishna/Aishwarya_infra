@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+.terms-main-cont {
+    margin-top: 70px;
+    max-width: 1920px;
+    width: 100%;
+    height: auto;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.terms-main-cont > span {
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    color: #AA0000;
+    cursor: pointer;
+}
+
+.terms-main-cont > h1 {
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    color: #0d3b66;
+    text-align: center;
+}
+
+.terms-sec {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Effective date */
+.terms-effective {
+    font-size: 14px;
+    color: #777;
+    font-weight: 400;
+}
+
+/* Intro paragraph */
+.terms-intro {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.terms-intro strong {
+    color: #0d3b66;
+    font-weight: 600;
+}
+
+/* Divider */
+.terms-divider {
+    border: none;
+    border-top: 1px solid #dce3ec;
+    margin: 4px 0;
+}
+
+/* Each section block */
+.terms-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Section heading (h2) */
+.terms-section h2 {
+    font-size: 17px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+    color: #0d3b66;
+    border-left: 4px solid #EAD292;
+    padding-left: 10px;
+}
+
+/* Paragraphs */
+.terms-section p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: #444;
+}
+
+.terms-section p strong {
+    color: #0d3b66;
+    font-weight: 600;
+}
+
+/* Lists */
+.terms-section ul {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.terms-section ul li {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #444;
+    list-style: disc;
+}
+
+/* Contact section */
+.terms-contact p {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.9;
+}
+
+.terms-contact strong {
+    color: #0d3b66;
+    font-weight: 600;
+}
+@media (max-width: 480px) {
+    .terms-main-cont {
+        padding: 30px 20px;
+    }
+
+    .terms-main-cont > h1 {
+        font-size: 22px;
+    }
+
+    .terms-section h2 {
+        font-size: 15px;
+    }
+
+    .terms-intro,
+    .terms-section p,
+    .terms-section ul li,
+    .terms-contact p,
+    .terms-effective {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .terms-main-cont {
+        padding: 20px 16px;
+    }
+
+    .terms-main-cont > h1 {
+        font-size: 20px;
+    }
+
+    .terms-section h2 {
+        font-size: 14px;
+    }
+
+    .terms-intro,
+    .terms-section p,
+    .terms-section ul li,
+    .terms-contact p,
+    .terms-effective {
+        font-size: 12px;
+    }
+}
