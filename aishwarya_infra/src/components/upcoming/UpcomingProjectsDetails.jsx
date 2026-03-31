@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import "./UpcomingprojectsDetails.css";
+import "./UpcomingProjectsDetails.css";
 
 import { Link, useNavigate } from "react-router-dom";
 
