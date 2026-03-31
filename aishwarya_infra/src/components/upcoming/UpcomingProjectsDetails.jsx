@@ -14,7 +14,7 @@ import security from "../../assets/security.jpeg";
 import gym from "../../assets/Gym.jpeg";
 import power from "../../assets/power.jpeg";
 import rain from "../../assets/rain.jpeg";
-import play from "../../assets/playArea.jpeg";
+import play from "../../assets/PlayArea.jpeg";
 import parking from "../../assets/Parking.jpeg";
 import hall from "../../assets/Communityhall.jpeg";
 import pool from "../../assets/Swimming_pool.jpeg";
