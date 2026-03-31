@@ -13,7 +13,7 @@ import rain from "../../assets/rain.jpeg";
 import play from "../../assets/PlayArea.jpeg";
 import parking from "../../assets/Parking.jpeg";
 import hall from "../../assets/Communityhall.jpeg";
-import pool from "../../assets/Swimming_pool.jpeg";
+import pool from "../../assets/swimming_pool.jpeg";
 
 import {
   FaBuilding,
