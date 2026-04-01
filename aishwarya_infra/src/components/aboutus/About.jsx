@@ -2,7 +2,7 @@ import "./About.css";
 import { useNavigate } from "react-router-dom";
 
 import first_img from "../../assets/banner_img.jpeg";
-import home from "../../assets/Community_img.jpeg";
+import home from "../../assets/community_img.jpeg";
 import vil from "../../assets/villa-img2.jpeg";
 import miss from "../../assets/mission-img.jpeg";
 import free from "../../assets/freepik.jpg";
