@@ -8,7 +8,7 @@
 }
 .upc-main-cont
 {  
-    max-width:1440px;
+    /* max-width:1440px; */
     width: 100%;
     height: auto;
     /* padding: 20px; */
@@ -193,9 +193,12 @@
     object-fit: cover;
     border-radius: 8px; 
 }
-.upc-card-img:hover
-{
-transform: scale(1.1);
+.upc-card-img {
+  transition: transform 0.3s ease; /* smooth animation */
+}
+
+.upc-card-img:hover {
+  transform: scale(1.03);
 }
 .upc-card>h1{
     padding-top: 10px;

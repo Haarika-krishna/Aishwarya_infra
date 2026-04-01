@@ -3,7 +3,7 @@
 
 /* Paragraphs / normal text */
 body, p, span, li, button, input, textarea {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Headings */
@@ -21,7 +21,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .swiper
 {
-  margin-top:75px;
   width: 100%;
 }
 .banner {
@@ -48,7 +47,7 @@ h1, h2, h3, h4, h5, h6 {
 .banner-content p {
   margin: 5px 0px !important;
   color: #fff;
-  font-family: 'Inter', sans-serif;
+  /* font-family: 'Inter', sans-serif; */
 }
 
 .banner-content .about-cnt-btn {
@@ -63,6 +62,11 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   font-size: 16px;
+}
+@media (max-width:770px){
+ .about-main-container{
+  margin-top: -20px; 
+}
 }
 
 @media(max-width:768px){
@@ -82,8 +86,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 .about-second-container p> strong{
     width:80%;
-    font-size: 1.5rem;
-    font-family: "Inter", sans-serif;
+    font-size: 30px;
+    font-family: "Roboto", sans-serif;
     display:inline-block;
     padding-bottom: 10px;
 }
@@ -94,7 +98,7 @@ p{
     width:45%;
     font-size: 1.2rem;
     font-weight: 400;
-    font-family: "Inter", sans-serif;
+    font-family: "Roboto", sans-serif;
     margin:0;  
     line-height:1.5;
 }
@@ -237,7 +241,7 @@ max-width:70%;
 margin:auto;
 font-size: 20px;
 line-height:1.5;
- font-family: "Inter", sans-serif;
+ font-family: "Roboto", sans-serif;
 }
 
  @media (max-width:1160px){
@@ -293,7 +297,9 @@ line-height:1.5;
 
 
 .fourth-section{
+
     margin-bottom: 20px;
+    
 }
 
 .fourth-section h1{
@@ -345,7 +351,7 @@ line-height:1.5;
     margin: 5px 0px;
 }
 .founders-container p{
-    font-family: "Inter", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 1.3rem;
     margin: 5px 0px;
 }
@@ -370,7 +376,7 @@ line-height:1.5;
 }
 @media (max-width: 768px){
   .fourth-section h1{
-    font-size: 21px;
+    font-size: 22px;
     margin-bottom: 15px;
   }
   .founders-container img{
@@ -418,9 +424,7 @@ line-height:1.5;
 }
 
 }
-.about-third-container:hover{
-  animation-play-state: paused;
-}
+
 .fifth-section{
   width:100%;
   padding:20px;
@@ -454,7 +458,7 @@ line-height:1.5;
 .vision-text p{
   font-size:20px;
   line-height:1.6;
-  font-family: "Roboto";
+  font-family: "Roboto",sans-serif;
 }
 
 
@@ -732,4 +736,85 @@ line-height:1.5;
   line-height:1.4;
 }
 
+}
+
+/* Add these styles to your About.css */
+
+.scroll-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.about-third-container {
+  display: flex;
+  gap: 50px;
+  width: max-content;
+  animation: scrollTeam 30s linear infinite;
+  will-change: transform; /* Optimize animation performance */
+}
+
+/* Ensure smooth animation on hover pause */
+.about-third-container:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollTeam {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Add fade effects on edges for better UX */
+.scroll-wrapper::before,
+.scroll-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.scroll-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+.scroll-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(255,255,255,1), rgba(255,255,255,0));
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .about-third-container {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-third-container {
+    gap: 20px;
+  }
+  
+  .scroll-wrapper::before,
+  .scroll-wrapper::after {
+    width: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-third-container {
+    gap: 15px;
+  }
+  
+  .scroll-wrapper::before,
+  .scroll-wrapper::after {
+    width: 30px;
+  }
 }

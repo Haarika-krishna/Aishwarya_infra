@@ -14,7 +14,8 @@ import "swiper/css/pagination";
 import homeabout from "../../assets/homeabout.jpg";
 import banner1 from "../../assets/HomeBanner1.png";
 import banner2 from "../../assets/homebanner.jpeg";
-
+import banner3 from "../../assets/banners1.jpeg";
+import banner4 from "../../assets/banners2.jpeg";
 
 import about from "../../assets/homeabout.jpeg";
 import completed from "../../assets/completed.jpeg"
@@ -26,7 +27,7 @@ const banners=[
     {
         title:"Elevating Modern Living",
         desc:"Luxury apartments and modern homes designed for your lifestyle.",
-        img:banner1,
+        img:banner4,
     },
       {
     title: "Comfort Meets Luxury",
@@ -36,7 +37,7 @@ const banners=[
    {
     title: "Your Perfect Place Awaits",
     desc: "Explore stylish homes and apartments built for modern families.",
-    img: homeabout,
+    img: banner3,
   },
 ]
 function Home()
@@ -63,7 +64,7 @@ function Home()
                        <button className='banner-exp-btn' onClick={() => navigate('/projects/upcoming')}>
                         <span>Expolre Properties</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className='arr-icon'>
-                            <path d="M2.5 10.0001H17.5M17.5 10.0001L10.4167 17.0834M17.5 10.0001L10.4167 2.91675" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.5 10.0001H17.5M17.5 10.0001L10.4167 17.0834M17.5 10.0001L10.4167 2.91675" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
                     </div>
@@ -201,7 +202,7 @@ function Home()
                     <button className='but-banner-exp-btn' onClick={() => navigate('/projects/upcoming')}>
                         <span>Explore Properties</span>
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className='arr-icon'>
-                            <path d="M2.5 10.0001H17.5M17.5 10.0001L10.4167 17.0834M17.5 10.0001L10.4167 2.91675" stroke="#022B4B" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M2.5 10.0001H17.5M17.5 10.0001L10.4167 17.0834M17.5 10.0001L10.4167 2.91675" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                     </button>
                     

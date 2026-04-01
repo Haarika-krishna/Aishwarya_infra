@@ -7,7 +7,7 @@
     box-sizing: border-box;
     /* border: 1px solid red; */
     font-family: 'Roboto', sans-serif;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 .ser-main-cont
 {
@@ -59,7 +59,7 @@
 .banner-content p {
   margin: 15px 0;
   color: #fff;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .banner-content button {
@@ -101,7 +101,7 @@
   font-size: 18px;
   font-size: 300;
   text-align: center;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
 }
 .ser-cards-cont
@@ -232,7 +232,7 @@
   font-size: 18px;
   font-weight: 400;
   font-style: "regular";
-  font-family: "inter";
+  font-family: "Roboto",sans-serif;
   color: #cdcdcd;
   text-align: center;
 }

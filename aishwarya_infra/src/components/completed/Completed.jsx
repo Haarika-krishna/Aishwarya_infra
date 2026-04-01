@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
+import city from "../../assets/city.jpeg";
 import banner from "../../assets/Contact-first-img.jpeg";
 import banner2 from "../../assets/commercial_space1.jpeg";
 import Apartment from "../../assets/villa.jpeg";
@@ -20,17 +20,12 @@ const banners = [
   {
     title: "Explore Our Completed Projects",
     desc: "Building the future with quality, innovation, and trust.",
-    img: banner,
+    img: city,
   },
   {
     title: "Explore Our Completed Projects",
     desc: "Building the future with quality, innovation, and trust.",
     img: banner2,
-  },
-  {
-    title: "Explore Our Completed Projects",
-    desc: "Building the future with quality, innovation, and trust.",
-    img: banner,
   }
 ]
 
@@ -171,6 +166,7 @@ function Completed()
                   </div>
               ))}
             </div>
+            
             <div className='up-look-cont'>
                     <h1>Looking for your Dream Property?</h1>
                     <p>Get in Touch with Our Experts Today!</p>
@@ -181,6 +177,7 @@ function Completed()
                         </svg>
                     </button>
             </div>
+            
         </div>
         </>
     )

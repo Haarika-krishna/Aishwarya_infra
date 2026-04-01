@@ -1,8 +1,8 @@
 import "./About.css";
 import { useNavigate } from "react-router-dom";
 
-import first_img from "../../assets/Contact-first-img.jpeg";
-import home from "../../assets/Sweet-Home.jpeg";
+import first_img from "../../assets/banner_img.jpeg";
+import home from "../../assets/Community_img.jpeg";
 import vil from "../../assets/villa-img2.jpeg";
 import miss from "../../assets/mission-img.jpeg";
 import free from "../../assets/freepik.jpg";
@@ -39,42 +39,49 @@ const banners = [
   }
 ];
 
+// Define team members in an array for better maintainability
+const teamMembers = [
+  { id: 1, name: "Kamal", role: "Chairman", img: chairman },
+  { id: 2, name: "Rakesh", role: "CEO", img: ceo },
+  { id: 3, name: "Aishwarya", role: "Founder", img: founder },
+  { id: 4, name: "Rajesh", role: "Co-Founder", img: cofounder }
+];
+
 const About = () => {
-  const navigate =useNavigate();
+  const navigate = useNavigate();
+  
   return (
     <>
       <div className="about-main-container">
-
-        {/* 🔥 Swiper Section */}
         <Swiper
-                        modules={[Navigation, Pagination, Autoplay]}
-                        // navigation
-                        pagination={{ clickable: true }}
-                        autoplay={{ delay: 3000 }}
-                        loop={true}
-                       className="swiper">
-                        {banners.map((item, index) => (
-                          <SwiperSlide key={index}>
-                            <div
-                              className="banner"
-                              style={{ backgroundImage: `url(${item.img})` }}
-                            >
-                              <div className="banner-content">
-                                <h1>{item.title}</h1>
-                                <p>{item.desc}</p>
-                                <button className="about-cnt-btn" onClick={() => navigate('/contact')}>
-                                  <span>Contact Us</span>
-                                          <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className='arr-icon'>
-                                              <path d="M2.5 10.0001H17.5M17.5 10.0001L10.4167 17.0834M17.5 10.0001L10.4167 2.91675" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
-                                          </svg>
-                                </button>
-                              </div>
-                            </div>
-                          </SwiperSlide>
-                        ))}
-                          </Swiper>
+          modules={[Navigation, Pagination, Autoplay]}
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 3000 }}
+          loop={true}
+          className="swiper"
+        >
+          {banners.map((item, index) => (
+            <SwiperSlide key={index}>
+              <div
+                className="banner"
+                style={{ backgroundImage: `url(${item.img})` }}
+              >
+                <div className="banner-content">
+                  <h1>{item.title}</h1>
+                  <p>{item.desc}</p>
+                  <button className="about-cnt-btn" onClick={() => navigate('/contact')}>
+                    <span>Contact Us</span>
+                    <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className='arr-icon'>
+                      <path d="M2.5 10.0001H17.5M17.5 10.0001L10.4167 17.0834M17.5 10.0001L10.4167 2.91675" stroke="#ffffff" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-        {/* 🔹 About Content */}
+        {/* About Content */}
         <div className="about-second-container">
           <p>
             <strong>About Our Company</strong><br />
@@ -86,7 +93,7 @@ const About = () => {
           <img src={home} alt="about" className="about-img" />
         </div>
 
-        {/* 🔹 Intro Section */}
+        {/* Intro Section */}
         <div className="infra-intro">
           <h2>Shaping the Future of Living</h2>
           <p>
@@ -95,14 +102,12 @@ const About = () => {
           </p>
         </div>
 
-        {/* 🔹 Vision & Mission */}
+        {/* Vision & Mission */}
         <div className="fifth-section">
-
           <div className="vision-container">
             <div className="vision-image">
               <img src={free} alt="vision"/>
             </div>
-
             <div className="vision-text">
               <h1>Our Vision</h1>
               <p>Our vision is to become a trusted and leading name in the real estate industry by delivering innovative, high-quality developments that enhance modern lifestyles. We strive to create spaces that are not just structures, but communities where people feel secure, comfortable, and proud to belong.</p>
@@ -114,72 +119,28 @@ const About = () => {
               <h1>Our Mission</h1>
               <p>Our mission is to design and develop thoughtfully planned properties that combine quality construction, modern design, and sustainability. We are committed to maintaining transparency, ensuring timely delivery, and building long-term relationships with our customers through trust, reliability, and excellence in every project we undertake.</p>
             </div>
-
             <div className="mission-image">
               <img src={miss} alt="mission"/>
             </div>
           </div>
-
         </div>
 
-        {/* 🔹 Team Section */}
+        {/* Team Section */}
         <div className="fourth-section">
           <h1>Our Team</h1>
-
-          <div className="about-third-container">
-
-            <div className="founders-container">
-              <img src={chairman} alt="ceo" />
-              <h2>Kamal</h2>
-              <p>Chairman</p>
-            </div>
-
-            <div className="founders-container">
-              <img src={ceo} alt="ceo" />
-              <h2>Rakesh</h2>
-              <p>CEO</p>
-            </div>
-
-            <div className="founders-container">
-              <img src={founder} alt="ceo" />
-              <h2>Aishwarya</h2>
-              <p>Founder</p>
-            </div>
-
-            <div className="founders-container">
-              <img src={cofounder} alt="ceo" />
-              <h2>Rajesh</h2>
-              <p>Co-Founder</p>
-            </div>
-
-            {/* duplicates */}
-
-             <div className="founders-container">
-              <img src={chairman} alt="ceo" />
-              <h2>Kamal</h2>
-              <p>Chairman</p>
-            </div>
-              
-               <div className="founders-container">
-              <img src={ceo} alt="ceo" />
-              <h2>Rakesh</h2>
-              <p>CEO</p>
-            </div>
-
-            <div className="founders-container">
-              <img src={founder} alt="ceo" />
-              <h2>Aishwarya</h2>
-              <p>Founder</p>
-            </div>
-
-            <div className="founders-container">
-              <img src={cofounder} alt="ceo" />
-              <h2>Rajesh</h2>
-              <p>Co-Founder</p>
+          <div className="scroll-wrapper">
+            <div className="about-third-container">
+              {/* Render team members twice for infinite scroll effect */}
+              {[...teamMembers, ...teamMembers].map((member, index) => (
+                <div key={`${member.id}-${index}`} className="founders-container">
+                  <img src={member.img} alt={member.name} />
+                  <h2>{member.name}</h2>
+                  <p>{member.role}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
-
       </div>
     </>
   );

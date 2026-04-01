@@ -1,23 +1,28 @@
 import { useState } from "react";
 import company from "../../assets/company-logo.png";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
-
   const [menuOpen, setMenuOpen] = useState(false);
   const [projectOpen, setProjectOpen] = useState(false);
 
+  const closeMenus = () => {
+    setMenuOpen(false);
+    setProjectOpen(false);
+  };
+
   return (
     <nav className="navbar-container">
-
       <div className="navbar-section">
-
         <div className="company-img">
-          <Link to="/" onClick={() => {
-              setMenuOpen(false);
-              setProjectOpen(false);}}><img src={company} alt="logo" className="company-logo"/></Link>
-         
+          <NavLink to="/" end onClick={closeMenus}>
+            <img
+              src={company}
+              alt="logo"
+              className="company-logo"
+            />
+          </NavLink>
         </div>
 
         {/* Hamburger / Close Icon */}
@@ -33,24 +38,33 @@ const Navbar = () => {
         </div>
 
         <ul className={`navbar-elements ${menuOpen ? "active" : ""}`}>
-
           <li>
-            <Link to="/" onClick={() => {
-              setMenuOpen(false);
-              setProjectOpen(false);
-            }}>Home</Link>
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) =>
+                isActive ? "active-nav-link" : ""
+              }
+              onClick={closeMenus}
+            >
+              Home
+            </NavLink>
           </li>
 
           <li>
-            <Link to="/about" onClick={() => {
-              setMenuOpen(false);
-              setProjectOpen(false);
-            }}>About</Link>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive ? "active-nav-link" : ""
+              }
+              onClick={closeMenus}
+            >
+              About
+            </NavLink>
           </li>
 
           {/* Projects Dropdown */}
           <li className="dropdown">
-
             <div
               className="dropdown-title"
               onClick={() => setProjectOpen(!projectOpen)}
@@ -60,61 +74,81 @@ const Navbar = () => {
             </div>
 
             <ul className={`dropdown-menu ${projectOpen ? "show" : ""}`}>
-
               <li>
-                <Link to="/projects/upcoming" onClick={() => {
-                  setMenuOpen(false);
-                  setProjectOpen(false);
-                }}>
+                <NavLink
+                  to="/projects/upcoming"
+                  className={({ isActive }) =>
+                    isActive ? "active-nav-link" : ""
+                  }
+                  onClick={closeMenus}
+                >
                   Upcoming
-                </Link>
+                </NavLink>
               </li>
 
               <li>
-                <Link to="/projects/completed" onClick={() => {
-                  setMenuOpen(false);
-                  setProjectOpen(false);
-                }}>
+                <NavLink
+                  to="/projects/completed"
+                  className={({ isActive }) =>
+                    isActive ? "active-nav-link" : ""
+                  }
+                  onClick={closeMenus}
+                >
                   Completed
-                </Link>
+                </NavLink>
               </li>
-
             </ul>
-
           </li>
 
           <li>
-            <Link to="/blog" onClick={() => {
-              setMenuOpen(false);
-              setProjectOpen(false);
-            }}>Blog</Link>
+            <NavLink
+              to="/blog"
+              className={({ isActive }) =>
+                isActive ? "active-nav-link" : ""
+              }
+              onClick={closeMenus}
+            >
+              Blog
+            </NavLink>
           </li>
 
           <li>
-            <Link to="/services" onClick={() => {
-              setMenuOpen(false);
-              setProjectOpen(false);
-            }}>Services</Link>
+            <NavLink
+              to="/services"
+              className={({ isActive }) =>
+                isActive ? "active-nav-link" : ""
+              }
+              onClick={closeMenus}
+            >
+              Services
+            </NavLink>
           </li>
 
           <li>
-            <Link to="/gallery" onClick={() => {
-              setMenuOpen(false);
-              setProjectOpen(false);
-            }}>Gallery</Link>
+            <NavLink
+              to="/gallery"
+              className={({ isActive }) =>
+                isActive ? "active-nav-link" : ""
+              }
+              onClick={closeMenus}
+            >
+              Gallery
+            </NavLink>
           </li>
 
           <li>
-            <Link to="/contact" onClick={() => {
-              setMenuOpen(false);
-              setProjectOpen(false);
-            }}>Contact</Link>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                isActive ? "active-nav-link" : ""
+              }
+              onClick={closeMenus}
+            >
+              Contact
+            </NavLink>
           </li>
-
         </ul>
-
       </div>
-
     </nav>
   );
 };

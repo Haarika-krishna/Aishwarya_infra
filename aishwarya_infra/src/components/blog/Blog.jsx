@@ -1,11 +1,13 @@
 import './blog.css'
 
 import first_img from "../../assets/Contact-first-img.jpeg";
+import ban from "../../assets/banner_dot.jpeg";
 import villa from "../../assets/villa.jpeg";
+import virtual from "../../assets/virtualImage.jpeg";
 import plot from "../../assets/plot.jpeg";
 import flat from "../../assets/flat.jpeg";
 import gated from "../../assets/Gated-communities.jpeg";
-import touch from "../../assets/get-in-touch.jpeg";
+import touch from "../../assets/getintouch.jpeg";
 import property from "../../assets/property.jpeg";
 
 import { Link, useNavigate } from "react-router-dom";
@@ -21,12 +23,12 @@ import "swiper/css/pagination";
 // 🔥 Swiper Banner Data
 const banners = [
   {
-    img: first_img,
+    img: virtual,
     title: "Latest Insights",
     desc: "Stay updated with real estate trends and investment tips."
   },
   {
-    img: villa,
+    img: ban,
     title: "Luxury Living",
     desc: "Explore premium villas and modern lifestyle."
   },
@@ -132,27 +134,16 @@ const Blog = () => {
 
 
         {/* 🔹 Contact Section */}
-        <div className="contact-cta-section">
-          <div className="contact-cta-container">
-
-            <div className="contact-cta-left">
-              <h1>Get in Touch with Us</h1>
-              <p>
-                We'd love to hear from you! Whether you have questions, need more
-                information, or want to discuss your next project.
-              </p>
-
-              <button onClick={()=>{navigate("/contact")}}>
-                Contact Us
-              </button>
+        <div className='up-look-cont'>
+                    <h1>Looking for your Dream Property?</h1>
+                    <p>Get in Touch with Our Experts Today!</p>
+                    <button className='banner-exp-btn' onClick={() => navigate("/contact")}>
+                        <span>Get in Touch</span>
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" className='arr-icon'>
+                            <path d="M2.5 10.0001H17.5M17.5 10.0001L10.4167 17.0834M17.5 10.0001L10.4167 2.91675" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
             </div>
-
-            <div className="contact-cta-right">
-              <img src={touch} alt="contact" />
-            </div>
-
-          </div>
-        </div>
 
       </div>
     </>

@@ -1,6 +1,7 @@
-import first_img from "../../assets/Contact-first-img.jpeg";
+import first_img from "../../assets/getintouch.jpeg";
 import women from "../../assets/Contact-women.jpeg";
 import contactbanner from "../../assets/contactbanner.png"
+import first from "../../assets/Contact-first-img.jpeg";
 
 import { useState } from "react";
 import "./Contact.css";
@@ -16,8 +17,8 @@ import "swiper/css/pagination";
 const banners = [
   {
     img: first_img,
-    title: "Contact Us",
-    desc: "We are here to help you with your dream property."
+    // title: "Contact Us",
+    // desc: "We are here to help you with your dream property."
   },
   {
     img: contactbanner,
@@ -171,7 +172,7 @@ const Contact = () => {
           <div className="third-inner-container">
 
             <div className="left-section">
-              <img src={first_img} alt="company" />
+              <img src={first} alt="company" />
             </div>
 
             <div className="right-cont-section">
@@ -184,6 +185,7 @@ const Contact = () => {
         </div>
 
         {/* 🔹 Map Section */}
+        <div className="map-section">
         <div className="container-map-section">
           <h1>Google Map</h1>
 
@@ -195,7 +197,7 @@ const Contact = () => {
             style={{ border: 0 }}
           />
         </div>
-
+      </div>
       </div>
     </>
   );

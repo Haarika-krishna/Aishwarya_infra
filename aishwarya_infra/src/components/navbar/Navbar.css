@@ -16,7 +16,6 @@ mask-size: contain;
 /* ================= NAVBAR ================= */
 
 .navbar-container{
-max-width:1440px;
 width:100%;
 margin:0 auto;
 height:75px;
@@ -24,7 +23,7 @@ position:fixed;
 top:0;
 left:0;
 right:0;
-background:#1b2a41;
+background:#022B4B;
 z-index:100;
 }
 
@@ -72,7 +71,7 @@ transition:0.3s;
 }
 
 .navbar-elements a:hover{
-color:#00aaff;
+color:#f5c518;
 }
 
 /* ================= DROPDOWN ================= */
@@ -129,6 +128,8 @@ background:white;
 mask:var(--svg) no-repeat center;
 }
 
+
+
 /* ================= RESPONSIVE ================= */
 
 @media (max-width:1024px){
@@ -161,8 +162,13 @@ font-size:1rem;
 
 @media (max-width:770px){
 
+  .navbar-container{
+    height:50px;
+  }
+
 .navbar-section{
 padding:0 15px;
+height:60px;
 }
 .company-img{
   padding: 10px;
@@ -181,11 +187,10 @@ color:white;
 /* mobile menu */
 .navbar-elements{
 position:absolute;
-top:75px;
+top:50px;
 left:0;
 width:100%;
-background:#1b2a41;
-
+background:#022B4B;
 flex-direction:column;
 align-items:flex-start;
 

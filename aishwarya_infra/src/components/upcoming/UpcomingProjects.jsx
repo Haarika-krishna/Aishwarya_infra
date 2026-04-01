@@ -10,13 +10,14 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import banner from "../../assets/Upcoming/upcoming_banner.jpeg";
+import banner1 from "../../assets/up1.jpeg"
 
 
 const banners = [
   {
     title: "Explore Our UpComing Projects",
     desc: "Building the future with quality, innovation, and trust.",
-    img: banner,
+    img: banner1,
   }
 ]
 
@@ -162,6 +163,7 @@ const navigate = useNavigate();
                   </div>
               ))}
             </div>
+            
             <div className='up-look-cont'>
                     <h1>Looking for your Dream Property?</h1>
                     <p>Get in Touch with Our Experts Today!</p>
@@ -172,6 +174,7 @@ const navigate = useNavigate();
                         </svg>
                     </button>
             </div>
+           
         </div>
         </>
     )

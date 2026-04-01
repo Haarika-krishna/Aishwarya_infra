@@ -1,16 +1,19 @@
 .footer-section{
-  max-width: 1440px;
     width:100%;
     padding:30px;
-    background:#1b2a41;
+    background:#022B4B;
     color: white;
     margin: 0 auto;
 }
 
 .footer-hold-container{
+  max-width: 1440px;
+  width:100%;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   gap: 20px;
+  padding-bottom: 12px;
 }
 
 .footer-first-sect,
@@ -50,14 +53,14 @@
 
 .footer-hold-container h2{
     font-size: 1rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     color:white;
 }
 
 .footer-hold-container a, .footer-hold-container p{
     font-size: 1rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     color:white;
 }
@@ -84,24 +87,29 @@
 }
 .three-content p{
   font-size: 1rem;
-  font-family: 'Inter',sans-serif;
+  font-family: 'Roboto',sans-serif;
   cursor:pointer;
   color: white;
   margin: 8px 0px;
+}
+.copyright-container{
+  padding-top: 10px;
 }
 .copyright-container> p{
     margin : 0;
     text-align: center;
     font-size: 1rem;
     font-weight: 400;
-    font-family: 'Inter';
+    font-family: 'Roboto',sans-serif;
      color: white;
 }
 .copyright-container a{
     color: white;
 }
 hr{
-  margin: 5px 10px;
+  max-width: 1440px;
+  width:100%;
+  margin: 0 auto;
 }
 
 .ic--baseline-facebook {
